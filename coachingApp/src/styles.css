@@ -1,4 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html, body { height: 100%; width:100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #e6f0e9;
+}
+
+
+.side-bar-item{
+    padding:1em;
+}
+
+.right-menu-header > .float-right{
+    float: right;
+}
+.right-menu-header{
+    height: 1em;
+}
+.left-menu-header{
+    background-color: #1659c7;
+}
+.right-menu-header{
+    background-color: #1659c7;
+}
+.side-navbar{
+    background-color: #6f42c1;
+}
