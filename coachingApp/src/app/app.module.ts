@@ -15,12 +15,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { GoalComponent } from './goal/goal.component';
+import { ChartComponent } from './chart/chart.component';
+import { InfoComponent } from './info/info.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [			
+    AppComponent,
+      GoalComponent,
+      ChartComponent,
+      InfoComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
