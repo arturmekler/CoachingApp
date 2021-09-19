@@ -1,35 +1,50 @@
-<div class="wrapper">
-  <div class="row">
-    <div class="side-navbar col-2 overflow-auto">
-      <div class="logo">
-        <div class="first-section-menu flex-column">
-          <ul class="sidebar-nav">
-            <li class="side-bar-header">Pages</li>
-            <li><a routerLink="/goal" routerLinkActive="active">Goal</a></li>
-            <li><a routerLink="/chart" routerLinkActive="active">Chart</a></li>
-            <li><a routerLink="/info" routerLinkActive="active">Info</a></li>
-          </ul>
-        </div>
-      </div>
+
+
+<div class=".container-fluid">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
     </div>
-      <div class="main-content col-10">
-        <div class="row">
-          <div class="left-menu-header col">
-            <mat-icon>toc</mat-icon>
-            <input matInput type="text">
-          </div>
-          <div class="right-menu-header m-3 col">
-            <div class="float-right">
-              <mat-icon>notifications</mat-icon>
-              <mat-icon> message</mat-icon>
-              <mat-icon>language</mat-icon>
-            </div>
-          </div>
-          <div class="content-middle">
-            <router-outlet></router-outlet>
-          </div>
+  </nav>
+
+  <div class="row py-3">
+    <div class="col-3 order-2" id="sticky-sidebar">
+        <div class="sticky-top">
+          <mat-selection-list #shoes [multiple]="false">
+            <mat-list-option routerLink="/goal" routerLinkActive="active">Goal</mat-list-option>
+            <mat-list-option routerLink="/chart" routerLinkActive="active">Chart</mat-list-option>
+            <mat-list-option routerLink="/info" routerLinkActive="active">Info</mat-list-option>
+          </mat-selection-list>
         </div>
-        </div>
-  </div>
-  
+    </div>
+    <div class="col" id="main">
+      <router-outlet></router-outlet>
+        ...   
+    </div>
+</div>
 </div>
